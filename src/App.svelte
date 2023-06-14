@@ -36,7 +36,13 @@
   }
 
   :global(:root) {
-    --theme-color: purple;
+    --color-lightMode: purple;
+    --color-darkMode: #bfc2c7;
+  }
+
+  :global(body.dark-mode) {
+    color: #bfc2c7;
+    background-color: #1d3040;
   }
 
   /* End of Global Styles */
