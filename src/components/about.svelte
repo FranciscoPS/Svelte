@@ -1,4 +1,6 @@
 <script>
+  import Button from "./Button.svelte";
+
   const gitHubUrl = "https://github.com/FranciscoPS";
   const styles = {
     darkMode: false,
@@ -25,12 +27,13 @@
 
   {#if styles.darkMode}
     <span>Dark Mode Enabled!</span>
+    <!-- Podemos agregar un else -->
     <!-- {:else} -->
   {/if}
 
-  <button on:click={handleClick}>Click {count === 0 ? "" : count}</button>
+  <Button text="Click Me" {count} on:click={handleClick} />
 
-  <button on:click={toggle}> {styles.darkMode ? "🌞" : "🌚"}</button>
+  <Button text={styles.darkMode ? "🌞" : "🌚"} on:click={toggle} />
 </div>
 
 <style>
@@ -40,7 +43,7 @@
 
   span {
     display: block;
-    
+
     margin: 10px 0;
   }
 

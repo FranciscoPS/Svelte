@@ -3,6 +3,7 @@
   import Text from "./components/Text.svelte";
   import Person from "./components/Person.svelte";
   import Skills from "./components/Skills.svelte";
+  import Input from "./components/Input.svelte";
 
   //Los export van a servir para obtener los valores de props, en este caso el name y lastName del main.js
   export let name;
@@ -27,6 +28,8 @@
   <Person {...data} />
 
   <Skills />
+
+  <Input />
 
   <img src={svelteLogo} alt="Svelte Logo" />
 </main>
