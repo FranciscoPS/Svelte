@@ -1,17 +1,29 @@
 <script>
-  import About from "./components/about.svelte";
+  import About from "./components/About.svelte";
+  import Text from "./components/Text.svelte";
+  import Person from "./components/Person.svelte";
 
   //Los export van a servir para obtener los valores de props, en este caso el name y lastName del main.js
   export let name;
   export let lastName;
   //Variables que no requieren ser obtenidas de props y se mantienen en local del archivo
   const svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
+  const data = {
+    name: "Francisco",
+    lastName: "Peralta",
+    age: 27,
+  };
 </script>
 
 <main>
   <h1>Hello {name} {lastName} !</h1>
 
-  <About></About>
+  <About />
+
+  <Text anotherText="Hello there" />
+  <Text />
+
+  <Person {...data} />
 
   <img src={svelteLogo} alt="Svelte Logo" />
 </main>
